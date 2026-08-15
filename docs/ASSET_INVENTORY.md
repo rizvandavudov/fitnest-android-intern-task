@@ -44,10 +44,9 @@ variants. The remaining images are shared.
 
 | Filename | Theme | Content |
 |---|---|---|
-| `home_gym_pulse_primary_light.webp` | Light | First Pulse Gym image |
-| `home_gym_pulse_secondary_light.webp` | Light | Second Pulse Gym image |
-| `home_gym_pulse_tertiary_light.webp` | Light | Third Pulse Gym image |
-| `home_gym_pulse_dark.webp` | Dark | Dark-theme Pulse Gym image |
+| `home_light_gym_primary.png` | Light | First Pulse Gym image |
+| `home_light_gym_secondary.png` | Light | Second Pulse Gym image |
+| `home_dark_gym_shared.png` | Dark | Dark-theme Pulse Gym image |
 
 The Dark Figma design reuses the same gym raster in multiple cards.
 
@@ -55,7 +54,7 @@ The Dark Figma design reuses the same gym raster in multiple cards.
 
 | Filename | Theme | Content |
 |---|---|---|
-| `profile_avatar.webp` | Shared | Profile avatar |
+| `profile_avatar_source.png` | Shared | Profile avatar |
 
 The same visible avatar will be used for Light and Dark themes. The additional
 background image fill found behind the Dark avatar is a duplicated/covered
@@ -107,7 +106,7 @@ bottom-navigation items are visual elements unless otherwise required.
 
 Repository location:
 
-`assets/images/`
+`app/src/main/res/drawable-nodpi/`
 
 Application loading:
 
@@ -134,15 +133,11 @@ where supported. Each converted icon will be visually checked against Figma.
 |---|---:|
 | Category raster images | 9 |
 | FitMarket raster images | 2 |
-| Gym raster images | 4 |
+| Gym raster images | 3 |
 | Profile raster images | 1 |
-| Home/section vector icons | 6 |
-| Bottom-navigation vector icons | 5 |
-| Profile vector icons | 9 |
-| Total raster images | 16 |
+| Total raster images | 15 |
 | Total vector icons | 20 |
-| Total application assets | 36 |
-
+| Total application assets | 35 |
 ## Excluded reference assets
 
 The following Figma elements will not be added as application assets:
