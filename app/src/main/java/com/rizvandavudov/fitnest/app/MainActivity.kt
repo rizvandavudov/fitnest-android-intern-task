@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest
+package com.rizvandavudov.fitnest.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.rizvandavudov.fitnest.ui.theme.FitNestTheme
+import com.rizvandavudov.fitnest.core.designsystem.FitNestTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, modifier: Modifier = Modifier.Companion) {
     Text(
         text = "Hello $name!",
         modifier = modifier

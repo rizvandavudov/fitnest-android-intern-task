@@ -1,6 +1,5 @@
-package com.rizvandavudov.fitnest.ui.theme
+package com.rizvandavudov.fitnest.core.designsystem
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

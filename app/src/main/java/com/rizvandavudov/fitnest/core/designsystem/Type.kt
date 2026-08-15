@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.ui.theme
+package com.rizvandavudov.fitnest.core.designsystem
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
