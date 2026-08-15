@@ -20,6 +20,16 @@ val MaterialTheme.fitNestColors: FitNestColors
     @ReadOnlyComposable
     get() = LocalFitNestColors.current
 
+val MaterialTheme.fitNestTypography: FitNestTypography
+    @Composable
+    @ReadOnlyComposable
+    get() = LocalFitNestTypography.current
+
+val MaterialTheme.fitNestShapes: FitNestShapes
+    @Composable
+    @ReadOnlyComposable
+    get() = LocalFitNestShapes.current
+
 @Composable
 fun FitNestTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -39,10 +49,13 @@ fun FitNestTheme(
 
     CompositionLocalProvider(
         LocalFitNestColors provides fitNestColors,
+        LocalFitNestTypography provides DefaultFitNestTypography,
+        LocalFitNestShapes provides DefaultFitNestShapes,
     ) {
         MaterialTheme(
             colorScheme = materialColorScheme,
-            typography = Typography,
+            typography = MaterialTypography,
+            shapes = MaterialShapes,
             content = content,
         )
     }
@@ -51,6 +64,8 @@ fun FitNestTheme(
 @Composable
 private fun FitNestThemePreviewContent() {
     val colors = MaterialTheme.fitNestColors
+    val typography = MaterialTheme.fitNestTypography
+    val shapes = MaterialTheme.fitNestShapes
 
     Surface(
         color = colors.screenBackground,
@@ -59,26 +74,36 @@ private fun FitNestThemePreviewContent() {
             modifier = Modifier.padding(24.dp),
         ) {
             Text(
-                text = "FitNest primary text",
+                text = "Salam, Nigar!",
+                style = typography.greeting,
                 color = colors.primaryText,
+                maxLines = 1,
             )
 
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "FitNest secondary text",
-                color = colors.secondaryText,
+                text = "FitMarket",
+                style = typography.marketTitle,
+                color = colors.primaryText,
+                maxLines = 1,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             Surface(
                 color = colors.primaryAction,
+                shape = shapes.button,
             ) {
                 Text(
-                    text = "Primary action",
+                    text = "Yadda saxla",
+                    style = typography.buttonLabel,
                     color = colors.onPrimaryAction,
-                    modifier = Modifier.padding(16.dp),
+                    modifier = Modifier.padding(
+                        horizontal = 24.dp,
+                        vertical = 13.dp,
+                    ),
+                    maxLines = 1,
                 )
             }
         }
