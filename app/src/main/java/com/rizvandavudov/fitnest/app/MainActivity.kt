@@ -14,15 +14,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.rizvandavudov.fitnest.core.designsystem.FitNestTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
+
         setContent {
             FitNestTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                ) { innerPadding ->
                     Greeting(
                         name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
                     )
                 }
             }
@@ -31,17 +36,23 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier.Companion) {
+fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier,
+) {
     Text(
         text = "Hello $name!",
-        modifier = modifier
+        modifier = modifier,
     )
 }
 
-@Preview(showBackground = true)
+@Preview(
+    name = "Greeting",
+    showBackground = true,
+)
 @Composable
-fun GreetingPreview() {
+private fun GreetingPreview() {
     FitNestTheme {
-        Greeting("Android")
+        Greeting(name = "Android")
     }
 }
