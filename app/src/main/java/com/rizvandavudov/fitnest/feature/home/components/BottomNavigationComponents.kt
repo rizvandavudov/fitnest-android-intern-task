@@ -6,11 +6,15 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -76,14 +80,20 @@ fun BottomNavigationItem(
     }
 
     val iconSize =
-        if (item.destination == BottomNavigationDestination.QR) {
+        if (
+            item.destination ==
+            BottomNavigationDestination.QR
+        ) {
             FitNestDimens.homeBottomBarQrIconSize
         } else {
             FitNestDimens.homeBottomBarIconSize
         }
 
     val iconLabelSpacing =
-        if (item.destination == BottomNavigationDestination.QR) {
+        if (
+            item.destination ==
+            BottomNavigationDestination.QR
+        ) {
             FitNestDimens.homeBottomBarQrLabelSpacing
         } else {
             FitNestDimens.homeBottomBarIconLabelSpacing
@@ -91,13 +101,16 @@ fun BottomNavigationItem(
 
     Column(
         modifier = modifier
-            .height(FitNestDimens.homeBottomBarItemHeight)
+            .height(
+                FitNestDimens.homeBottomBarItemHeight,
+            )
             .clickable(
                 enabled = item.isEnabled,
                 onClick = onClick,
             )
             .semantics {
-                contentDescription = itemContentDescription
+                contentDescription =
+                    itemContentDescription
                 role = Role.Button
                 selected = isSelected
 
@@ -105,9 +118,10 @@ fun BottomNavigationItem(
                     disabled()
                 }
             },
-        horizontalAlignment = Alignment.CenterHorizontally,
+        horizontalAlignment =
+            Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(
-            iconLabelSpacing,
+            space = iconLabelSpacing,
             alignment = Alignment.CenterVertically,
         ),
     ) {
@@ -143,14 +157,15 @@ fun FitNestBottomBar(
     val colors = MaterialTheme.fitNestColors
 
     val navigationShape = RoundedCornerShape(
-        topStart = FitNestDimens.homeBottomBarTopRadius,
-        topEnd = FitNestDimens.homeBottomBarTopRadius,
+        topStart =
+            FitNestDimens.homeBottomBarTopRadius,
+        topEnd =
+            FitNestDimens.homeBottomBarTopRadius,
     )
 
-    Row(
+    Column(
         modifier = modifier
             .fillMaxWidth()
-            .height(FitNestDimens.homeBottomBarHeight)
             .clip(navigationShape)
             .background(colors.navigationSurface)
             .drawBehind {
@@ -162,28 +177,51 @@ fun FitNestBottomBar(
                         y = 0f,
                     ),
                     strokeWidth =
-                        FitNestDimens.homeBottomBarBorderWidth.toPx(),
+                        FitNestDimens
+                            .homeBottomBarBorderWidth
+                            .toPx(),
+                )
+            },
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(
+                    FitNestDimens.homeBottomBarHeight,
+                )
+                .padding(
+                    horizontal =
+                        FitNestDimens
+                            .screenHorizontalPadding,
+                    vertical =
+                        FitNestDimens
+                            .screenHorizontalPadding,
+                ),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            items.forEach { item ->
+                BottomNavigationItem(
+                    item = item,
+                    isSelected =
+                        item.destination ==
+                                selectedDestination,
+                    itemContentDescription =
+                        itemContentDescription(item),
+                    onClick = {
+                        onItemClick(item)
+                    },
+                    modifier = Modifier.weight(1f),
                 )
             }
-            .padding(
-                horizontal = FitNestDimens.screenHorizontalPadding,
-                vertical = FitNestDimens.screenHorizontalPadding,
-            ),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        items.forEach { item ->
-            BottomNavigationItem(
-                item = item,
-                isSelected =
-                    item.destination == selectedDestination,
-                itemContentDescription =
-                    itemContentDescription(item),
-                onClick = {
-                    onItemClick(item)
-                },
-                modifier = Modifier.weight(1f),
-            )
         }
+
+        Spacer(
+            modifier = Modifier
+                .fillMaxWidth()
+                .windowInsetsBottomHeight(
+                    WindowInsets.navigationBars,
+                ),
+        )
     }
 }
 
@@ -212,9 +250,13 @@ private fun FitNestBottomBarPreview() {
     FitNestPreview {
         FitNestBottomBar(
             items =
-                PreviewData.homeUiState.bottomNavigationItems,
+                PreviewData
+                    .homeUiState
+                    .bottomNavigationItems,
             selectedDestination =
-                PreviewData.homeUiState.selectedNavigationItem,
+                PreviewData
+                    .homeUiState
+                    .selectedNavigationItem,
             itemContentDescription = { item ->
                 item.label
             },

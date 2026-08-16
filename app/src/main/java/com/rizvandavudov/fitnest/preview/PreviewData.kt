@@ -2,6 +2,7 @@ package com.rizvandavudov.fitnest.preview
 
 import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.feature.home.HomeSampleData
+import com.rizvandavudov.fitnest.feature.home.HomeUiState
 import com.rizvandavudov.fitnest.feature.profile.ProfileUiState
 
 object PreviewData {
@@ -10,7 +11,7 @@ object PreviewData {
         "https://raw.githubusercontent.com/rizvandavudov/" +
                 "fitnest-android-intern-task/main/app/src/main/res/drawable-nodpi/"
 
-    val homeUiState = HomeSampleData.state
+    val homeUiState: HomeUiState = HomeSampleData.state
 
     val profileUiState = ProfileUiState(
         profileId = "ID: 12345ADFSG",

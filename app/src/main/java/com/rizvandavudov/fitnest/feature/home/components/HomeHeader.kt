@@ -66,7 +66,11 @@ fun HomeHeader(
             )
         }
 
-        Spacer(modifier = Modifier.width(FitNestDimens.itemSpacing))
+        Spacer(
+            modifier = Modifier.width(
+                FitNestDimens.homeHeaderGreetingSpacing,
+            ),
+        )
 
         Text(
             text = greeting,

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">FitNest</string>
+    <string name="home_profile_content_description">Profilə keç</string>
+    <string name="home_notifications_content_description">Bildirişlər</string>
+
+    <string name="home_market_title">FitMarket</string>
+    <string name="home_nearby_gyms_title">Yaxınlıqdakı zallar</string>
+    <string name="home_see_more">Daha çox</string>
+
+    <string name="home_market_see_more_content_description">Daha çox FitMarket məhsuluna bax</string>
+    <string name="home_gyms_see_more_content_description">Yaxınlıqdakı bütün zallara bax</string>
+
+    <string name="home_market_card_suffix">məhsul kartı</string>
+    <string name="home_market_bookmark_suffix">yadda saxla</string>
+    <string name="home_market_action_suffix">mağazasına keç</string>
+    <string name="home_gym_rating_label">reytinq</string>
 </resources>

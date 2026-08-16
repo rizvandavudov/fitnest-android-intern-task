@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -58,6 +59,22 @@ fun MarketCard(
         isDarkTheme &&
                 model.imageSizeStyle == MarketImageSizeStyle.FEATURED
 
+    val cardShape = RoundedCornerShape(
+        if (isDarkTheme) {
+            FitNestDimens.marketDarkCardRadius
+        } else {
+            FitNestDimens.marketLightCardRadius
+        },
+    )
+
+    val imageShape = RoundedCornerShape(
+        if (isFeaturedDarkItem) {
+            FitNestDimens.marketFeaturedDarkImageRadius
+        } else {
+            FitNestDimens.marketLightImageRadius
+        },
+    )
+
     val imageWidth = if (isFeaturedDarkItem) {
         FitNestDimens.marketFeaturedDarkImageWidth
     } else {
@@ -80,7 +97,7 @@ fun MarketCard(
         modifier = modifier
             .width(FitNestDimens.marketCardWidth)
             .height(FitNestDimens.marketCardHeight)
-            .clip(MaterialTheme.shapes.large)
+            .clip(cardShape)
             .background(colors.surface)
             .clickable(onClick = onCardClick)
             .semantics {
@@ -100,7 +117,7 @@ fun MarketCard(
             modifier = Modifier
                 .width(imageWidth)
                 .height(imageHeight)
-                .clip(MaterialTheme.shapes.medium),
+                .clip(imageShape),
         )
 
         Column(
@@ -161,7 +178,9 @@ fun MarketCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .width(FitNestDimens.marketDiscountBadgeWidth)
+                        .width(
+                            FitNestDimens.marketDiscountBadgeWidth,
+                        )
                         .height(FitNestDimens.marketButtonHeight)
                         .clip(MaterialTheme.shapes.extraLarge)
                         .background(colors.secondaryContainer),
@@ -233,7 +252,11 @@ fun MarketSection(
                 ),
         )
 
-        Spacer(modifier = Modifier.height(FitNestDimens.itemSpacing))
+        Spacer(
+            modifier = Modifier.height(
+                FitNestDimens.homeSectionHeaderContentSpacing,
+            ),
+        )
 
         LazyRow(
             modifier = Modifier.fillMaxWidth(),

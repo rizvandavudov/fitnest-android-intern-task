@@ -105,4 +105,15 @@ object FitNestDimens {
 
     val homeBottomBarTopRadius = 20.dp
     val homeBottomBarBorderWidth = 1.dp
+    // Home screen spacing
+    val homeHeaderTopSpacing = 12.dp
+    val homeHeaderGreetingSpacing = 15.dp
+    val homeHeaderToCategoriesSpacing = 32.dp
+    val homeSectionHeaderContentSpacing = 16.dp
+
+    // Market Light/Dark radius
+    val marketLightCardRadius = 16.dp
+    val marketDarkCardRadius = 12.dp
+    val marketLightImageRadius = 12.dp
+    val marketFeaturedDarkImageRadius = 6.dp
 }
