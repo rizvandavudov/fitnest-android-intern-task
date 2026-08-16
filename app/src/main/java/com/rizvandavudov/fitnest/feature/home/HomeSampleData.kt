@@ -6,12 +6,14 @@ import com.rizvandavudov.fitnest.core.ui.model.ThemedImageUiModel
 object HomeSampleData {
 
     private const val RAW_IMAGE_BASE_URL =
-        "https://raw.githubusercontent.com/rizvandavudov/" + "fitnest-android-intern-task/main/app/src/main/res/drawable-nodpi/"
+        "https://raw.githubusercontent.com/rizvandavudov/" +
+                "fitnest-android-intern-task/main/app/src/main/res/drawable-nodpi/"
 
     private val categories = listOf(
         CategoryUiModel(
             id = "fitness",
             title = "Fitness",
+            lightAppearance = CategoryLightAppearance.LIGHT_OVERLAY,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_light_category_fitness.png"),
                 darkUrl = imageUrl("home_dark_category_fitness.png"),
@@ -22,6 +24,7 @@ object HomeSampleData {
         CategoryUiModel(
             id = "pilates",
             title = "Pilates",
+            lightAppearance = CategoryLightAppearance.LIGHT_OVERLAY,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_light_category_pilates.png"),
                 darkUrl = imageUrl("home_dark_category_pilates.png"),
@@ -32,6 +35,7 @@ object HomeSampleData {
         CategoryUiModel(
             id = "combat",
             title = "Döyüş növləri",
+            lightAppearance = CategoryLightAppearance.LIGHT_OVERLAY,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_light_category_combat.png"),
                 darkUrl = imageUrl("home_dark_category_combat.png"),
@@ -42,6 +46,7 @@ object HomeSampleData {
         CategoryUiModel(
             id = "yoga",
             title = "Yoga",
+            lightAppearance = CategoryLightAppearance.DARK_OVERLAY,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_shared_category_yoga.png"),
                 lightFallbackResId = R.drawable.home_shared_category_yoga,
@@ -50,17 +55,21 @@ object HomeSampleData {
         CategoryUiModel(
             id = "spa_massage",
             title = "Spa və masaj",
+            lightAppearance = CategoryLightAppearance.DARK_OVERLAY,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_shared_category_spa_massage.png"),
-                lightFallbackResId = R.drawable.home_shared_category_spa_massage,
+                lightFallbackResId =
+                    R.drawable.home_shared_category_spa_massage,
             ),
         ),
         CategoryUiModel(
             id = "cosmetology",
             title = "Kosmetoloji",
+            lightAppearance = CategoryLightAppearance.DARK_OVERLAY,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_shared_category_cosmetology.png"),
-                lightFallbackResId = R.drawable.home_shared_category_cosmetology,
+                lightFallbackResId =
+                    R.drawable.home_shared_category_cosmetology,
             ),
         ),
     )
@@ -72,9 +81,11 @@ object HomeSampleData {
             address = "Bakı şəhəri, Mehdi Abbasov küçəsi 10/4",
             discountText = "5 %",
             actionText = "Keçid et",
+            imageSizeStyle = MarketImageSizeStyle.FEATURED,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_fitmarket_product_primary.png"),
-                lightFallbackResId = R.drawable.home_fitmarket_product_primary,
+                lightFallbackResId =
+                    R.drawable.home_fitmarket_product_primary,
             ),
         ),
         MarketItemUiModel(
@@ -83,9 +94,11 @@ object HomeSampleData {
             address = "Bakı şəhəri, Mehdi Abbasov küçəsi 10/4",
             discountText = "5 %",
             actionText = "Keçid et",
+            imageSizeStyle = MarketImageSizeStyle.STANDARD,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_fitmarket_product_secondary.png"),
-                lightFallbackResId = R.drawable.home_fitmarket_product_secondary,
+                lightFallbackResId =
+                    R.drawable.home_fitmarket_product_secondary,
             ),
         ),
     )
@@ -97,6 +110,7 @@ object HomeSampleData {
             distanceText = "Sizdən 12.2 km uzaqlıqda",
             rating = "4.5",
             badgeText = "Yeni",
+            lightOverlayStyle = GymLightOverlayStyle.STRONG,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_light_gym_primary.png"),
                 darkUrl = imageUrl("home_dark_gym_shared.png"),
@@ -110,6 +124,7 @@ object HomeSampleData {
             distanceText = "Sizdən 12.2 km uzaqlıqda",
             rating = "4.5",
             badgeText = null,
+            lightOverlayStyle = GymLightOverlayStyle.SOFT,
             image = ThemedImageUiModel(
                 lightUrl = imageUrl("home_light_gym_secondary.png"),
                 darkUrl = imageUrl("home_dark_gym_shared.png"),

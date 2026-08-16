@@ -22,20 +22,17 @@ object FitNestDimens {
     val categoryCardSpacing = 12.dp
 
     // FitMarket
-    val marketCardWidth = 328.dp
-    val marketCardHeight = 134.dp
-    val marketImageWidth = 78.dp
-    val marketImageHeight = 104.dp
+
+
     val marketPrimaryDarkImageWidth = 97.dp
     val marketPrimaryDarkImageHeight = 110.dp
-    val marketButtonHeight = 28.dp
+
 
     // Gym
-    val gymCardWidth = 260.dp
+
     val gymCardHeight = 226.dp
     val gymImageWidth = 260.dp
-    val gymImageHeight = 168.dp
-    val gymCardSpacing = 20.dp
+
 
     // Profile
     val profileAvatarSize = 120.dp
@@ -61,4 +58,51 @@ object FitNestDimens {
 
     // Borders
     val thinBorder = 1.dp
+    val microSpacing = 2.dp
+
+
+    val marketFeaturedDarkImageWidth = 97.dp
+    val marketFeaturedDarkImageHeight = 110.dp
+
+    val marketBookmarkTouchTarget = 28.dp
+    val marketBookmarkIconSize = 16.dp
+
+    val marketDiscountBadgeWidth = 36.dp
+    val marketButtonWidth = 74.dp
+    val marketFeaturedDarkButtonWidth = 88.dp
+
+
+    val gymRatingHeight = 30.dp
+    val gymRatingIconSize = 14.dp
+
+    val gymBadgeWidth = 76.dp
+    val gymBadgeHeight = 30.dp
+
+    val gymImageContentInset = 10.dp
+    val gymMetaIconSize = 20.dp
+    val gymMetaSpacing = 6.dp
+
+
+    val marketCardWidth = 328.dp
+    val marketCardHeight = 134.dp
+    val marketImageWidth = 78.dp
+    val marketImageHeight = 104.dp
+    val marketButtonHeight = 28.dp
+
+    val gymCardWidth = 260.dp
+    val gymImageHeight = 168.dp
+    val gymCardSpacing = 20.dp
+
+    val homeBottomBarHeight = 82.dp
+    val homeBottomBarItemWidth = 74.dp
+    val homeBottomBarItemHeight = 50.dp
+
+    val homeBottomBarIconSize = 24.dp
+    val homeBottomBarQrIconSize = 28.dp
+
+    val homeBottomBarIconLabelSpacing = 10.dp
+    val homeBottomBarQrLabelSpacing = 4.dp
+
+    val homeBottomBarTopRadius = 20.dp
+    val homeBottomBarBorderWidth = 1.dp
 }

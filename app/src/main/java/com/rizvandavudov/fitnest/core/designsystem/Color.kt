@@ -90,6 +90,18 @@ data class FitNestColors(
     val divider: Color,
     val navigationSurface: Color,
     val navigationBorder: Color,
+    val imageOverlayLight: Color,
+    val imageOverlayDark: Color,
+    val onImageOverlayLight: Color,
+    val onImageOverlayDark: Color,
+    val secondaryContainer: Color,
+    val ratingContainer: Color,
+    val onRatingContainer: Color,
+    val badgeContainer: Color,
+    val onBadgeContainer: Color,
+    val gymImageOverlayStrong: Color,
+    val gymImageOverlaySoft: Color,
+    val gymImageOverlayDark: Color,
 )
 
 internal val LightFitNestColors = FitNestColors(
@@ -112,6 +124,18 @@ internal val LightFitNestColors = FitNestColors(
     divider = Neutral300,
     navigationSurface = Color(0x80FFFFFF),
     navigationBorder = Neutral300,
+    imageOverlayLight = Color(0x80FFFFFF),
+    imageOverlayDark = Color(0x80000000),
+    onImageOverlayLight = Neutral1000,
+    onImageOverlayDark = White,
+    secondaryContainer = Neutral200,
+    ratingContainer = Color(0xCCFFFFFF),
+    onRatingContainer = Neutral1000,
+    badgeContainer = Color(0xE6FFFFFF),
+    onBadgeContainer = Neutral1000,
+    gymImageOverlayStrong = Color(0x63FFFFFF),
+    gymImageOverlaySoft = Color(0x33FFFFFF),
+    gymImageOverlayDark = Color(0x99000000),
 )
 
 internal val DarkFitNestColors = FitNestColors(
@@ -134,6 +158,19 @@ internal val DarkFitNestColors = FitNestColors(
     divider = Neutral900,
     navigationSurface = Color(0xFF030C10),
     navigationBorder = Neutral800,
+    imageOverlayLight = Color(0x80FFFFFF),
+    imageOverlayDark = Color(0x80000000),
+    onImageOverlayLight = Neutral1000,
+    onImageOverlayDark = White,
+    secondaryContainer = Neutral800,
+    ratingContainer = Color(0x990C0E12),
+    onRatingContainer = White,
+    badgeContainer = Color(0xFF176A74),
+    onBadgeContainer = White,
+    gymImageOverlayStrong = Color(0x63FFFFFF),
+    gymImageOverlaySoft = Color(0x33FFFFFF),
+    gymImageOverlayDark = Color(0x99000000),
+
 )
 
 internal val LocalFitNestColors = staticCompositionLocalOf {
