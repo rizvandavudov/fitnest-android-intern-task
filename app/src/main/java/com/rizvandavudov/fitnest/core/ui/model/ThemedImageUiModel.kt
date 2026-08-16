@@ -9,4 +9,21 @@ data class ThemedImageUiModel(
     val lightFallbackResId: Int,
     @param:DrawableRes
     val darkFallbackResId: Int = lightFallbackResId,
-)
+) {
+    fun url(isDarkTheme: Boolean): String {
+        return if (isDarkTheme) {
+            darkUrl
+        } else {
+            lightUrl
+        }
+    }
+
+    @DrawableRes
+    fun fallbackResId(isDarkTheme: Boolean): Int {
+        return if (isDarkTheme) {
+            darkFallbackResId
+        } else {
+            lightFallbackResId
+        }
+    }
+}

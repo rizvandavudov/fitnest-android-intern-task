@@ -1,16 +1,6 @@
 package com.rizvandavudov.fitnest.feature.home
 
-import androidx.annotation.DrawableRes
 import com.rizvandavudov.fitnest.core.ui.model.ThemedImageUiModel
-
-data class HomeUiState(
-    val isLoading: Boolean = false,
-    val userInitials: String = "",
-    val greeting: String = "",
-    val categories: List<CategoryUiModel> = emptyList(),
-    val marketProducts: List<MarketProductUiModel> = emptyList(),
-    val gyms: List<GymUiModel> = emptyList(),
-)
 
 data class CategoryUiModel(
     val id: String,
@@ -18,15 +8,13 @@ data class CategoryUiModel(
     val image: ThemedImageUiModel,
 )
 
-data class MarketProductUiModel(
+data class MarketItemUiModel(
     val id: String,
     val storeName: String,
     val address: String,
     val discountText: String,
     val actionText: String,
-    val imageUrl: String,
-    @param:DrawableRes
-    val fallbackResId: Int,
+    val image: ThemedImageUiModel,
 )
 
 data class GymUiModel(
@@ -36,4 +24,30 @@ data class GymUiModel(
     val rating: String,
     val badgeText: String?,
     val image: ThemedImageUiModel,
+)
+
+enum class BottomNavigationDestination {
+    HOME,
+    SEARCH,
+    QR,
+    SUBSCRIPTION,
+    MORE,
+}
+
+data class BottomNavigationItemUiModel(
+    val destination: BottomNavigationDestination,
+    val label: String,
+    val isEnabled: Boolean,
+)
+
+data class HomeUiState(
+    val isLoading: Boolean = false,
+    val initials: String = "",
+    val greeting: String = "",
+    val categories: List<CategoryUiModel> = emptyList(),
+    val marketItems: List<MarketItemUiModel> = emptyList(),
+    val gyms: List<GymUiModel> = emptyList(),
+    val bottomNavigationItems: List<BottomNavigationItemUiModel> = emptyList(),
+    val selectedNavigationItem: BottomNavigationDestination =
+        BottomNavigationDestination.HOME,
 )
