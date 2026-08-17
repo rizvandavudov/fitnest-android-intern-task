@@ -14,4 +14,32 @@
     <string name="home_market_bookmark_suffix">yadda saxla</string>
     <string name="home_market_action_suffix">mağazasına keç</string>
     <string name="home_gym_rating_label">reytinq</string>
+    <string name="profile_title">Profil</string>
+    <string name="profile_back_content_description">Geri qayıt</string>
+
+    <string name="profile_avatar_content_description">Profil şəkli</string>
+    <string name="profile_avatar_edit_content_description">Profil şəklini dəyiş</string>
+
+    <string name="profile_first_name_label">Ad</string>
+    <string name="profile_last_name_label">Soyad</string>
+    <string name="profile_phone_label">Mobil nömrə</string>
+    <string name="profile_email_label">Email</string>
+    <string name="profile_subscription_label">Cari Abunəlik</string>
+
+    <string name="profile_user_icon_content_description">İstifadəçi</string>
+    <string name="profile_phone_icon_content_description">Telefon</string>
+    <string name="profile_email_icon_content_description">Email</string>
+    <string name="profile_subscription_icon_content_description">Abunəlik planı</string>
+
+    <string name="profile_edit_first_name_content_description">Adı redaktə et</string>
+    <string name="profile_edit_last_name_content_description">Soyadı redaktə et</string>
+    <string name="profile_edit_phone_content_description">Mobil nömrəni redaktə et</string>
+    <string name="profile_edit_email_content_description">Email ünvanını redaktə et</string>
+
+    <string name="profile_logout_title">Çıxış</string>
+    <string name="profile_logout_description">Hesabınızdan çıxış edin</string>
+    <string name="profile_logout_content_description">Hesabdan çıxış et</string>
+
+    <string name="profile_save_button">Yadda saxla</string>
+    <string name="profile_save_content_description">Profil məlumatlarını yadda saxla</string>
 </resources>

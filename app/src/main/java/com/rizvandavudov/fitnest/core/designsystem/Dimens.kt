@@ -84,7 +84,7 @@ object FitNestDimens {
     val profileChevronSize = 24.dp
 
     // Profile save button
-    val profileButtonHeight = 54.dp
+    val profileButtonHeight = 52.dp
 
     // General icons
     val iconExtraSmall = 14.dp
@@ -157,4 +157,10 @@ object FitNestDimens {
     val marketDarkCardRadius = 12.dp
     val marketLightImageRadius = 12.dp
     val marketFeaturedDarkImageRadius = 6.dp
+    // Profile screen layout
+    val profileTopBarToAvatarSpacing = 19.dp
+    val profileAvatarToFieldsSpacing = 24.dp
+    val profileFieldSpacing = 12.dp
+    val profileSectionSpacing = 20.dp
+    val profileBottomBarSpacing = 16.dp
 }
