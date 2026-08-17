@@ -37,6 +37,13 @@ private val SuccessContainerDark = Color(0xFF1B4649)
 private val ErrorLight = Color(0xFFCA1818)
 private val ErrorDark = Color(0xFFC6585A)
 
+private val Neutral75 = Color(0xFFFAFAFA)
+private val Neutral450 = Color(0xFFC1C1CC)
+private val Neutral975 = Color(0xFF0D0D0D)
+
+private val AvatarEditContainerDark =
+    Color(0xE6123B55)
+
 internal val LightColorScheme = lightColorScheme(
     primary = Primary700B,
     onPrimary = White,
@@ -102,6 +109,13 @@ data class FitNestColors(
     val gymImageOverlayStrong: Color,
     val gymImageOverlaySoft: Color,
     val gymImageOverlayDark: Color,
+    val fieldLabelText: Color,
+    val profileIdText: Color,
+    val editIcon: Color,
+    val trailingIcon: Color,
+    val avatarBorder: Color,
+    val avatarEditContainer: Color,
+    val logoutTitle: Color,
 )
 
 internal val LightFitNestColors = FitNestColors(
@@ -136,6 +150,13 @@ internal val LightFitNestColors = FitNestColors(
     gymImageOverlayStrong = Color(0x63FFFFFF),
     gymImageOverlaySoft = Color(0x33FFFFFF),
     gymImageOverlayDark = Color(0x99000000),
+    fieldLabelText = Neutral975,
+    profileIdText = Neutral500,
+    editIcon = Neutral700,
+    trailingIcon = Neutral450,
+    avatarBorder = Neutral800,
+    avatarEditContainer = White,
+    logoutTitle = Neutral1000,
 )
 
 internal val DarkFitNestColors = FitNestColors(
@@ -170,8 +191,18 @@ internal val DarkFitNestColors = FitNestColors(
     gymImageOverlayStrong = Color(0x63FFFFFF),
     gymImageOverlaySoft = Color(0x33FFFFFF),
     gymImageOverlayDark = Color(0x99000000),
-
+    fieldLabelText = White,
+    profileIdText = Neutral500,
+    editIcon = Neutral700,
+    trailingIcon = Neutral450,
+    avatarBorder = Neutral800,
+    avatarEditContainer = AvatarEditContainerDark,
+    logoutTitle = Neutral75,
 )
+
+
+
+
 
 internal val LocalFitNestColors = staticCompositionLocalOf {
     LightFitNestColors

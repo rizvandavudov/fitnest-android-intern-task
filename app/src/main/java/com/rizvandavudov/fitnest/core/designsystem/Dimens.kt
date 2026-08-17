@@ -34,15 +34,56 @@ object FitNestDimens {
     val gymImageWidth = 260.dp
 
 
-    // Profile
+    // Profile top bar
+    val profileTopBarHeight = 48.dp
+    val profileTopBarHorizontalTouchPadding = 5.dp
+    val profileTopBarIconSize = 24.dp
+
+    // Profile avatar
+    val profileAvatarFrameWidth = 155.dp
+    val profileAvatarImageAreaHeight = 120.dp
     val profileAvatarSize = 120.dp
     val profileAvatarEditSize = 28.dp
     val profileAvatarEditIconSize = 16.dp
+    val profileAvatarEditTouchOffsetX = 95.dp
+    val profileAvatarEditTouchOffsetY = 74.dp
+    val profileAvatarIdSpacing = 11.dp
+
+    // Profile fields
     val profileFieldGroupHeight = 92.dp
+    val profileFieldLabelHeight = 32.dp
+    val profileFieldLabelHorizontalPadding = 8.dp
+    val profileFieldLabelVerticalPadding = 4.dp
+    val profileFieldLabelToInputSpacing = 8.dp
+
     val profileFieldHeight = 52.dp
+    val profileFieldContentStartPadding = 6.dp
+    val profileFieldContentEndPadding = 16.dp
     val profileFieldIconContainerSize = 38.dp
     val profileFieldIconSize = 18.dp
+    val profileFieldIconValueSpacing = 12.dp
+
     val profileEditIconSize = 24.dp
+    val profileFieldEditTouchOffsetX = (-4).dp
+
+    // Subscription
+    val profileStatusChipWidth = 64.dp
+    val profileStatusChipHeight = 26.dp
+    val profileStatusDotSize = 6.dp
+    val profileStatusHorizontalPadding = 12.dp
+    val profileStatusVerticalPadding = 4.dp
+    val profileStatusContentSpacing = 4.dp
+
+    // Logout
+    val profileLogoutRowHeight = 68.dp
+    val profileLogoutVerticalPadding = 12.dp
+    val profileLogoutIconContainerSize = 44.dp
+    val profileLogoutIconSize = 20.dp
+    val profileLogoutContentSpacing = 12.dp
+    val profileLogoutTextSpacing = 2.dp
+    val profileChevronSize = 24.dp
+
+    // Profile save button
     val profileButtonHeight = 54.dp
 
     // General icons
