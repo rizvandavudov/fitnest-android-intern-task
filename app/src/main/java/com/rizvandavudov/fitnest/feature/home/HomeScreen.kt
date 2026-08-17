@@ -25,6 +25,7 @@ import com.rizvandavudov.fitnest.feature.home.components.MarketSection
 import com.rizvandavudov.fitnest.feature.home.components.NearbyGymsSection
 import com.rizvandavudov.fitnest.preview.FitNestHomePreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
+import com.rizvandavudov.fitnest.preview.FitNestResponsivePreviews
 
 @Composable
 fun HomeScreen(
@@ -224,6 +225,25 @@ fun HomeScreen(
 @FitNestHomePreviews
 @Composable
 private fun HomeScreenPreview() {
+    FitNestPreview {
+        HomeScreen(
+            state = HomeSampleData.state,
+            onProfileClick = {},
+            onNotificationClick = {},
+            onCategoryClick = {},
+            onMarketSeeAllClick = {},
+            onMarketItemClick = {},
+            onMarketBookmarkClick = {},
+            onMarketActionClick = {},
+            onGymsSeeAllClick = {},
+            onGymClick = {},
+            onBottomNavigationItemClick = {},
+        )
+    }
+}
+@FitNestResponsivePreviews
+@Composable
+private fun HomeResponsivePreview() {
     FitNestPreview {
         HomeScreen(
             state = HomeSampleData.state,

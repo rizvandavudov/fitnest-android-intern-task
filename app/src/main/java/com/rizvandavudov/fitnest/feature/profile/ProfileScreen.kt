@@ -34,6 +34,7 @@ import com.rizvandavudov.fitnest.feature.profile.components.SubscriptionField
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.FitNestProfilePreviews
 import com.rizvandavudov.fitnest.preview.PreviewData
+import com.rizvandavudov.fitnest.preview.FitNestResponsivePreviews
 
 @Composable
 fun ProfileScreen(
@@ -354,6 +355,20 @@ private fun ProfileScreenPreview() {
     FitNestPreview {
         ProfileScreen(
             state = PreviewData.profileUiState,
+            onBackClick = {},
+            onAvatarEditClick = {},
+            onEditFieldClick = {},
+            onLogoutClick = {},
+            onSaveClick = {},
+        )
+    }
+}
+@FitNestResponsivePreviews
+@Composable
+private fun ProfileResponsivePreview() {
+    FitNestPreview {
+        ProfileScreen(
+            state = ProfileSampleData.state,
             onBackClick = {},
             onAvatarEditClick = {},
             onEditFieldClick = {},

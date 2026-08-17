@@ -124,3 +124,58 @@ private fun FitNestPreviewPreview() {
         )
     }
 }
+@Target(AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.BINARY)
+@Preview(
+    name = "Compact 360x800",
+    group = "Responsive",
+    widthDp = 360,
+    heightDp = 800,
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    backgroundColor = 0xFFF0F1F6,
+)
+@Preview(
+    name = "Reference 402x956",
+    group = "Responsive",
+    widthDp = 402,
+    heightDp = 956,
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    backgroundColor = 0xFFF0F1F6,
+)
+@Preview(
+    name = "Wide 412x915",
+    group = "Responsive",
+    widthDp = 412,
+    heightDp = 915,
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    backgroundColor = 0xFFF0F1F6,
+)
+@Preview(
+    name = "Compact Font 1.3",
+    group = "Responsive",
+    widthDp = 360,
+    heightDp = 800,
+    fontScale = 1.3f,
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    backgroundColor = 0xFFF0F1F6,
+)
+@Preview(
+    name = "Wide Dark 412x915",
+    group = "Responsive",
+    widthDp = 412,
+    heightDp = 915,
+    fontScale = 1.15f,
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    backgroundColor = 0xFF030510,
+)
+annotation class FitNestResponsivePreviews

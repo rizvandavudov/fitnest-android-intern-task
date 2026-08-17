@@ -10,18 +10,14 @@ import com.rizvandavudov.fitnest.core.designsystem.FitNestTheme
 
 class MainActivity : ComponentActivity() {
 
-    override fun onCreate(
-        savedInstanceState: Bundle?,
-    ) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
 
         setContent {
             FitNestTheme {
-                FitNestApp(
-                    modifier = Modifier.fillMaxSize(),
-                )
+                FitNestApp()
             }
         }
     }
