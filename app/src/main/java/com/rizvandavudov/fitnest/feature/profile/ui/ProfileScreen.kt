@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.feature.profile
+package com.rizvandavudov.fitnest.feature.profile.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
+import com.rizvandavudov.fitnest.feature.profile.data.ProfileSampleData
 import com.rizvandavudov.fitnest.feature.profile.ui.components.LogoutRow
 import com.rizvandavudov.fitnest.feature.profile.ui.components.ProfileAvatar
 import com.rizvandavudov.fitnest.feature.profile.ui.components.ProfileField

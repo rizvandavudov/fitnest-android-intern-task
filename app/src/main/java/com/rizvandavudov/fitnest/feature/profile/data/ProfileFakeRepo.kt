@@ -2,8 +2,8 @@ package com.rizvandavudov.fitnest.feature.profile.data
 
 import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.ui.model.ThemedImageUiModel
-import com.rizvandavudov.fitnest.feature.profile.ProfileTextsUiModel
-import com.rizvandavudov.fitnest.feature.profile.SubscriptionStatus
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileTextsUiModel
+import com.rizvandavudov.fitnest.feature.profile.ui.SubscriptionStatus
 
 class ProfileFakeRepo : ProfileDataSource {
 

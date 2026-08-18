@@ -37,8 +37,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
-import com.rizvandavudov.fitnest.feature.home.BottomNavigationDestination
-import com.rizvandavudov.fitnest.feature.home.BottomNavigationItemUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.BottomNavigationDestination
+import com.rizvandavudov.fitnest.feature.home.ui.BottomNavigationItemUiModel
 import com.rizvandavudov.fitnest.preview.FitNestComponentPreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.PreviewData

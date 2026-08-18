@@ -1,7 +1,7 @@
-package com.rizvandavudov.fitnest.feature.home.ui.mapper
+package com.rizvandavudov.fitnest.feature.home
 
-import com.rizvandavudov.fitnest.feature.home.HomeUiState
 import com.rizvandavudov.fitnest.feature.home.data.HomeDataSource
+import com.rizvandavudov.fitnest.feature.home.ui.HomeUiState
 
 class HomeUiMapper {
 

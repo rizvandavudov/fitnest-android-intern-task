@@ -1,5 +1,9 @@
 package com.rizvandavudov.fitnest.feature.profile
 
+import com.rizvandavudov.fitnest.feature.profile.data.ProfileSampleData
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileField
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileUiEvent
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

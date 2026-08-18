@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.feature.profile
+package com.rizvandavudov.fitnest.feature.profile.ui
 
 import com.rizvandavudov.fitnest.core.ui.model.ThemedImageUiModel
 

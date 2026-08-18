@@ -1,5 +1,7 @@
 package com.rizvandavudov.fitnest.feature.home
 
+import com.rizvandavudov.fitnest.feature.home.ui.BottomNavigationDestination
+import com.rizvandavudov.fitnest.feature.home.ui.HomeViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

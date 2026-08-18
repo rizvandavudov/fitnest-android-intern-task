@@ -7,6 +7,8 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.rizvandavudov.fitnest.core.designsystem.FitNestTheme
+import com.rizvandavudov.fitnest.feature.home.data.HomeSampleData
+import com.rizvandavudov.fitnest.feature.home.ui.HomeScreen
 import com.rizvandavudov.fitnest.feature.home.ui.components.HomeHeader
 import org.junit.Assert.assertTrue
 import org.junit.Rule

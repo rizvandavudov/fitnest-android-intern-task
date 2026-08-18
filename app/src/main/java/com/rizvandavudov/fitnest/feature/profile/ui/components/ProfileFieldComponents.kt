@@ -34,8 +34,8 @@ import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
 import com.rizvandavudov.fitnest.core.designsystem.fitNestShapes
 import com.rizvandavudov.fitnest.core.designsystem.fitNestTypography
-import com.rizvandavudov.fitnest.feature.profile.SubscriptionStatus
-import com.rizvandavudov.fitnest.feature.profile.SubscriptionUiModel
+import com.rizvandavudov.fitnest.feature.profile.ui.SubscriptionStatus
+import com.rizvandavudov.fitnest.feature.profile.ui.SubscriptionUiModel
 import com.rizvandavudov.fitnest.preview.FitNestComponentPreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.PreviewData

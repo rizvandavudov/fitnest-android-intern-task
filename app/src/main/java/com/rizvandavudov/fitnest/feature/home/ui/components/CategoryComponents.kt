@@ -29,8 +29,8 @@ import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
 import com.rizvandavudov.fitnest.core.designsystem.fitNestShapes
 import com.rizvandavudov.fitnest.core.designsystem.fitNestTypography
 import com.rizvandavudov.fitnest.core.ui.components.FitNestNetworkImage
-import com.rizvandavudov.fitnest.feature.home.CategoryLightAppearance
-import com.rizvandavudov.fitnest.feature.home.CategoryUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.CategoryLightAppearance
+import com.rizvandavudov.fitnest.feature.home.ui.CategoryUiModel
 import com.rizvandavudov.fitnest.preview.FitNestComponentPreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.PreviewData

@@ -8,10 +8,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.rizvandavudov.fitnest.feature.home.HomeScreen
-import com.rizvandavudov.fitnest.feature.home.HomeViewModel
-import com.rizvandavudov.fitnest.feature.profile.ProfileScreen
-import com.rizvandavudov.fitnest.feature.profile.ProfileViewModel
+import com.rizvandavudov.fitnest.feature.home.ui.HomeScreen
+import com.rizvandavudov.fitnest.feature.home.ui.HomeViewModel
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileScreen
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileViewModel
 
 @Composable
 fun FitNestNavHost(

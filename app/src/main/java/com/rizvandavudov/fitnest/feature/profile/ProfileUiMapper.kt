@@ -1,8 +1,8 @@
-package com.rizvandavudov.fitnest.feature.profile.ui.mapper
+package com.rizvandavudov.fitnest.feature.profile
 
-import com.rizvandavudov.fitnest.feature.profile.ProfileUiState
-import com.rizvandavudov.fitnest.feature.profile.SubscriptionUiModel
 import com.rizvandavudov.fitnest.feature.profile.data.ProfileDataSource
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileUiState
+import com.rizvandavudov.fitnest.feature.profile.ui.SubscriptionUiModel
 
 class ProfileUiMapper {
 

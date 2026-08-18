@@ -1,9 +1,9 @@
 package com.rizvandavudov.fitnest.preview
 
-import com.rizvandavudov.fitnest.feature.home.HomeSampleData
-import com.rizvandavudov.fitnest.feature.home.HomeUiState
-import com.rizvandavudov.fitnest.feature.profile.ProfileSampleData
-import com.rizvandavudov.fitnest.feature.profile.ProfileUiState
+import com.rizvandavudov.fitnest.feature.home.data.HomeSampleData
+import com.rizvandavudov.fitnest.feature.home.ui.HomeUiState
+import com.rizvandavudov.fitnest.feature.profile.data.ProfileSampleData
+import com.rizvandavudov.fitnest.feature.profile.ui.ProfileUiState
 
 object PreviewData {
 

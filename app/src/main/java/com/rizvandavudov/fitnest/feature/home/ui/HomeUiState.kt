@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.feature.home
+package com.rizvandavudov.fitnest.feature.home.ui
 
 import com.rizvandavudov.fitnest.core.ui.model.ThemedImageUiModel
 

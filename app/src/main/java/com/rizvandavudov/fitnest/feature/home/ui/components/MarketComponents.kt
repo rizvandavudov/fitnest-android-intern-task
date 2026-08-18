@@ -35,8 +35,8 @@ import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
 import com.rizvandavudov.fitnest.core.ui.components.FitNestNetworkImage
-import com.rizvandavudov.fitnest.feature.home.MarketImageSizeStyle
-import com.rizvandavudov.fitnest.feature.home.MarketItemUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.MarketImageSizeStyle
+import com.rizvandavudov.fitnest.feature.home.ui.MarketItemUiModel
 import com.rizvandavudov.fitnest.preview.FitNestComponentPreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.PreviewData

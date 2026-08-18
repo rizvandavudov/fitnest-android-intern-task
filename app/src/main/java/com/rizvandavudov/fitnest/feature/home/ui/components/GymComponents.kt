@@ -37,8 +37,8 @@ import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
 import com.rizvandavudov.fitnest.core.designsystem.fitNestShapes
 import com.rizvandavudov.fitnest.core.ui.components.FitNestNetworkImage
-import com.rizvandavudov.fitnest.feature.home.GymLightOverlayStyle
-import com.rizvandavudov.fitnest.feature.home.GymUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.GymLightOverlayStyle
+import com.rizvandavudov.fitnest.feature.home.ui.GymUiModel
 import com.rizvandavudov.fitnest.preview.FitNestComponentPreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.PreviewData

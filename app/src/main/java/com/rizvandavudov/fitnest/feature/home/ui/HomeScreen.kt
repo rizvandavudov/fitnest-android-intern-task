@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.feature.home
+package com.rizvandavudov.fitnest.feature.home.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
+import com.rizvandavudov.fitnest.feature.home.data.HomeSampleData
 import com.rizvandavudov.fitnest.feature.home.ui.components.CategoryRow
 import com.rizvandavudov.fitnest.feature.home.ui.components.FitNestBottomBar
 import com.rizvandavudov.fitnest.feature.home.ui.components.HomeHeader

@@ -2,15 +2,15 @@ package com.rizvandavudov.fitnest.feature.home.data
 
 import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.ui.model.ThemedImageUiModel
-import com.rizvandavudov.fitnest.feature.home.BottomNavigationDestination
-import com.rizvandavudov.fitnest.feature.home.BottomNavigationItemUiModel
-import com.rizvandavudov.fitnest.feature.home.CategoryLightAppearance
-import com.rizvandavudov.fitnest.feature.home.CategoryUiModel
-import com.rizvandavudov.fitnest.feature.home.GymLightOverlayStyle
-import com.rizvandavudov.fitnest.feature.home.GymUiModel
-import com.rizvandavudov.fitnest.feature.home.HomeTextsUiModel
-import com.rizvandavudov.fitnest.feature.home.MarketImageSizeStyle
-import com.rizvandavudov.fitnest.feature.home.MarketItemUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.BottomNavigationDestination
+import com.rizvandavudov.fitnest.feature.home.ui.BottomNavigationItemUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.CategoryLightAppearance
+import com.rizvandavudov.fitnest.feature.home.ui.CategoryUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.GymLightOverlayStyle
+import com.rizvandavudov.fitnest.feature.home.ui.GymUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.HomeTextsUiModel
+import com.rizvandavudov.fitnest.feature.home.ui.MarketImageSizeStyle
+import com.rizvandavudov.fitnest.feature.home.ui.MarketItemUiModel
 
 class FakeRepo : HomeDataSource {
 

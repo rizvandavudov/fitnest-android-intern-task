@@ -1,9 +1,9 @@
-package com.rizvandavudov.fitnest.feature.home
+package com.rizvandavudov.fitnest.feature.home.ui
 
 import androidx.lifecycle.ViewModel
+import com.rizvandavudov.fitnest.feature.home.HomeUiMapper
 import com.rizvandavudov.fitnest.feature.home.data.FakeRepo
 import com.rizvandavudov.fitnest.feature.home.data.HomeDataSource
-import com.rizvandavudov.fitnest.feature.home.ui.mapper.HomeUiMapper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
