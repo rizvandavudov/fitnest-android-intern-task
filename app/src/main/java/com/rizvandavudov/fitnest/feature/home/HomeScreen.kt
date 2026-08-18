@@ -14,15 +14,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
-import com.rizvandavudov.fitnest.feature.home.components.CategoryRow
-import com.rizvandavudov.fitnest.feature.home.components.FitNestBottomBar
-import com.rizvandavudov.fitnest.feature.home.components.HomeHeader
-import com.rizvandavudov.fitnest.feature.home.components.MarketSection
-import com.rizvandavudov.fitnest.feature.home.components.NearbyGymsSection
+import com.rizvandavudov.fitnest.feature.home.ui.components.CategoryRow
+import com.rizvandavudov.fitnest.feature.home.ui.components.FitNestBottomBar
+import com.rizvandavudov.fitnest.feature.home.ui.components.HomeHeader
+import com.rizvandavudov.fitnest.feature.home.ui.components.MarketSection
+import com.rizvandavudov.fitnest.feature.home.ui.components.NearbyGymsSection
 import com.rizvandavudov.fitnest.preview.FitNestHomePreviews
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.FitNestResponsivePreviews
@@ -45,41 +43,7 @@ fun HomeScreen(
 ) {
     val colors = MaterialTheme.fitNestColors
 
-    val marketTitle = stringResource(
-        R.string.home_market_title,
-    )
-    val nearbyGymsTitle = stringResource(
-        R.string.home_nearby_gyms_title,
-    )
-    val seeMoreLabel = stringResource(
-        R.string.home_see_more,
-    )
-
-    val profileContentDescription = stringResource(
-        R.string.home_profile_content_description,
-    )
-    val notificationContentDescription = stringResource(
-        R.string.home_notifications_content_description,
-    )
-    val marketSeeMoreContentDescription = stringResource(
-        R.string.home_market_see_more_content_description,
-    )
-    val gymsSeeMoreContentDescription = stringResource(
-        R.string.home_gyms_see_more_content_description,
-    )
-
-    val marketCardSuffix = stringResource(
-        R.string.home_market_card_suffix,
-    )
-    val marketBookmarkSuffix = stringResource(
-        R.string.home_market_bookmark_suffix,
-    )
-    val marketActionSuffix = stringResource(
-        R.string.home_market_action_suffix,
-    )
-    val gymRatingLabel = stringResource(
-        R.string.home_gym_rating_label,
-    )
+    val texts = state.texts
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -109,9 +73,9 @@ fun HomeScreen(
                         initials = state.initials,
                         greeting = state.greeting,
                         avatarContentDescription =
-                            profileContentDescription,
+                            texts.profileContentDescription,
                         notificationContentDescription =
-                            notificationContentDescription,
+                            texts.notificationContentDescription,
                         onAvatarClick = onProfileClick,
                         onNotificationClick =
                             onNotificationClick,
@@ -158,19 +122,25 @@ fun HomeScreen(
 
                 item(key = "market") {
                     MarketSection(
-                        title = marketTitle,
-                        actionLabel = seeMoreLabel,
+                        title = texts.marketTitle,
+                        actionLabel = texts.seeMoreLabel,
                         actionContentDescription =
-                            marketSeeMoreContentDescription,
+                            texts.marketSeeMoreContentDescription,
                         marketItems = state.marketItems,
                         cardContentDescription = { item ->
-                            "${item.storeName} $marketCardSuffix"
+                            texts.marketCardContentDescription(
+                                storeName = item.storeName,
+                            )
                         },
                         bookmarkContentDescription = { item ->
-                            "${item.storeName} $marketBookmarkSuffix"
+                            texts.marketBookmarkContentDescription(
+                                storeName = item.storeName,
+                            )
                         },
                         marketActionContentDescription = { item ->
-                            "${item.storeName} $marketActionSuffix"
+                            texts.marketActionContentDescription(
+                                storeName = item.storeName,
+                            )
                         },
                         onSeeAllClick = onMarketSeeAllClick,
                         onMarketItemClick = onMarketItemClick,
@@ -191,15 +161,15 @@ fun HomeScreen(
 
                 item(key = "nearby_gyms") {
                     NearbyGymsSection(
-                        title = nearbyGymsTitle,
-                        actionLabel = seeMoreLabel,
+                        title = texts.nearbyGymsTitle,
+                        actionLabel = texts.seeMoreLabel,
                         actionContentDescription =
-                            gymsSeeMoreContentDescription,
+                            texts.gymsSeeMoreContentDescription,
                         gyms = state.gyms,
                         gymContentDescription = { gym ->
-                            "${gym.name}, ${gym.rating} " +
-                                    "$gymRatingLabel, " +
-                                    gym.distanceText
+                            texts.gymContentDescription(
+                                gym = gym,
+                            )
                         },
                         onSeeAllClick = onGymsSeeAllClick,
                         onGymClick = onGymClick,
@@ -241,6 +211,7 @@ private fun HomeScreenPreview() {
         )
     }
 }
+
 @FitNestResponsivePreviews
 @Composable
 private fun HomeResponsivePreview() {

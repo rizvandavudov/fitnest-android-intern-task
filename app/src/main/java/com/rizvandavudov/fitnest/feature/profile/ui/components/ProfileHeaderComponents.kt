@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.feature.profile.components
+package com.rizvandavudov.fitnest.feature.profile.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

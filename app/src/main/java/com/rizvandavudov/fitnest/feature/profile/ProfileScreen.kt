@@ -21,19 +21,17 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import com.rizvandavudov.fitnest.R
 import com.rizvandavudov.fitnest.core.designsystem.FitNestDimens
 import com.rizvandavudov.fitnest.core.designsystem.fitNestColors
-import com.rizvandavudov.fitnest.feature.profile.components.LogoutRow
-import com.rizvandavudov.fitnest.feature.profile.components.ProfileAvatar
-import com.rizvandavudov.fitnest.feature.profile.components.ProfileField
-import com.rizvandavudov.fitnest.feature.profile.components.ProfileTopBar
-import com.rizvandavudov.fitnest.feature.profile.components.SaveButton
-import com.rizvandavudov.fitnest.feature.profile.components.SubscriptionField
+import com.rizvandavudov.fitnest.feature.profile.ui.components.LogoutRow
+import com.rizvandavudov.fitnest.feature.profile.ui.components.ProfileAvatar
+import com.rizvandavudov.fitnest.feature.profile.ui.components.ProfileField
+import com.rizvandavudov.fitnest.feature.profile.ui.components.ProfileTopBar
+import com.rizvandavudov.fitnest.feature.profile.ui.components.SaveButton
+import com.rizvandavudov.fitnest.feature.profile.ui.components.SubscriptionField
 import com.rizvandavudov.fitnest.preview.FitNestPreview
 import com.rizvandavudov.fitnest.preview.FitNestProfilePreviews
-import com.rizvandavudov.fitnest.preview.PreviewData
 import com.rizvandavudov.fitnest.preview.FitNestResponsivePreviews
 
 @Composable
@@ -48,76 +46,7 @@ fun ProfileScreen(
 ) {
     val colors = MaterialTheme.fitNestColors
 
-    val title = stringResource(R.string.profile_title)
-    val backContentDescription = stringResource(
-        R.string.profile_back_content_description,
-    )
-
-    val avatarContentDescription = stringResource(
-        R.string.profile_avatar_content_description,
-    )
-    val avatarEditContentDescription = stringResource(
-        R.string.profile_avatar_edit_content_description,
-    )
-
-    val firstNameLabel = stringResource(
-        R.string.profile_first_name_label,
-    )
-    val lastNameLabel = stringResource(
-        R.string.profile_last_name_label,
-    )
-    val phoneLabel = stringResource(
-        R.string.profile_phone_label,
-    )
-    val emailLabel = stringResource(
-        R.string.profile_email_label,
-    )
-    val subscriptionLabel = stringResource(
-        R.string.profile_subscription_label,
-    )
-
-    val userIconContentDescription = stringResource(
-        R.string.profile_user_icon_content_description,
-    )
-    val phoneIconContentDescription = stringResource(
-        R.string.profile_phone_icon_content_description,
-    )
-    val emailIconContentDescription = stringResource(
-        R.string.profile_email_icon_content_description,
-    )
-    val subscriptionIconContentDescription = stringResource(
-        R.string.profile_subscription_icon_content_description,
-    )
-
-    val editFirstNameContentDescription = stringResource(
-        R.string.profile_edit_first_name_content_description,
-    )
-    val editLastNameContentDescription = stringResource(
-        R.string.profile_edit_last_name_content_description,
-    )
-    val editPhoneContentDescription = stringResource(
-        R.string.profile_edit_phone_content_description,
-    )
-    val editEmailContentDescription = stringResource(
-        R.string.profile_edit_email_content_description,
-    )
-
-    val logoutTitle = stringResource(
-        R.string.profile_logout_title,
-    )
-    val logoutDescription = stringResource(
-        R.string.profile_logout_description,
-    )
-    val logoutContentDescription = stringResource(
-        R.string.profile_logout_content_description,
-    )
-
-    val saveButtonText = stringResource(
-        R.string.profile_save_button,
-    )
-    val saveContentDescription = stringResource(
-        R.string.profile_save_content_description,
-    )
+    val texts = state.texts
 
     BackHandler(
         enabled = true,
@@ -151,9 +80,9 @@ fun ProfileScreen(
                     ),
             ) {
                 SaveButton(
-                    text = saveButtonText,
+                    text = texts.saveButtonText,
                     contentDescription =
-                        saveContentDescription,
+                        texts.saveContentDescription,
                     onClick = onSaveClick,
                 )
             }
@@ -172,9 +101,9 @@ fun ProfileScreen(
         ) {
             item(key = "profile_top_bar") {
                 ProfileTopBar(
-                    title = title,
+                    title = texts.title,
                     backContentDescription =
-                        backContentDescription,
+                        texts.backContentDescription,
                     onBackClick = onBackClick,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -200,9 +129,9 @@ fun ProfileScreen(
                         avatar = state.avatar,
                         userId = state.userId,
                         avatarContentDescription =
-                            avatarContentDescription,
+                            texts.avatarContentDescription,
                         editContentDescription =
-                            avatarEditContentDescription,
+                            texts.avatarEditContentDescription,
                         onEditClick = onAvatarEditClick,
                     )
                 }
@@ -231,14 +160,14 @@ fun ProfileScreen(
                     ),
                 ) {
                     ProfileField(
-                        label = firstNameLabel,
+                        label = texts.firstNameLabel,
                         value = state.firstName,
                         iconResId =
                             R.drawable.ic_profile_user,
                         iconContentDescription =
-                            userIconContentDescription,
+                            texts.userIconContentDescription,
                         editContentDescription =
-                            editFirstNameContentDescription,
+                            texts.editFirstNameContentDescription,
                         onEditClick = {
                             onEditFieldClick(
                                 ProfileField.FIRST_NAME,
@@ -247,14 +176,14 @@ fun ProfileScreen(
                     )
 
                     ProfileField(
-                        label = lastNameLabel,
+                        label = texts.lastNameLabel,
                         value = state.lastName,
                         iconResId =
                             R.drawable.ic_profile_user,
                         iconContentDescription =
-                            userIconContentDescription,
+                            texts.userIconContentDescription,
                         editContentDescription =
-                            editLastNameContentDescription,
+                            texts.editLastNameContentDescription,
                         onEditClick = {
                             onEditFieldClick(
                                 ProfileField.LAST_NAME,
@@ -263,14 +192,14 @@ fun ProfileScreen(
                     )
 
                     ProfileField(
-                        label = phoneLabel,
+                        label = texts.phoneLabel,
                         value = state.phoneNumber,
                         iconResId =
                             R.drawable.ic_profile_phone,
                         iconContentDescription =
-                            phoneIconContentDescription,
+                            texts.phoneIconContentDescription,
                         editContentDescription =
-                            editPhoneContentDescription,
+                            texts.editPhoneContentDescription,
                         onEditClick = {
                             onEditFieldClick(
                                 ProfileField.PHONE_NUMBER,
@@ -279,14 +208,14 @@ fun ProfileScreen(
                     )
 
                     ProfileField(
-                        label = emailLabel,
+                        label = texts.emailLabel,
                         value = state.email,
                         iconResId =
                             R.drawable.ic_profile_email,
                         iconContentDescription =
-                            emailIconContentDescription,
+                            texts.emailIconContentDescription,
                         editContentDescription =
-                            editEmailContentDescription,
+                            texts.editEmailContentDescription,
                         onEditClick = {
                             onEditFieldClick(
                                 ProfileField.EMAIL,
@@ -295,10 +224,10 @@ fun ProfileScreen(
                     )
 
                     SubscriptionField(
-                        label = subscriptionLabel,
+                        label = texts.subscriptionLabel,
                         subscription = state.subscription,
                         iconContentDescription =
-                            subscriptionIconContentDescription,
+                            texts.subscriptionIconContentDescription,
                     )
                 }
             }
@@ -333,10 +262,10 @@ fun ProfileScreen(
 
             item(key = "profile_logout") {
                 LogoutRow(
-                    title = logoutTitle,
-                    description = logoutDescription,
+                    title = texts.logoutTitle,
+                    description = texts.logoutDescription,
                     contentDescription =
-                        logoutContentDescription,
+                        texts.logoutContentDescription,
                     onClick = onLogoutClick,
                     modifier = Modifier.padding(
                         horizontal =
@@ -354,7 +283,7 @@ fun ProfileScreen(
 private fun ProfileScreenPreview() {
     FitNestPreview {
         ProfileScreen(
-            state = PreviewData.profileUiState,
+            state = ProfileSampleData.state,
             onBackClick = {},
             onAvatarEditClick = {},
             onEditFieldClick = {},
@@ -363,6 +292,7 @@ private fun ProfileScreenPreview() {
         )
     }
 }
+
 @FitNestResponsivePreviews
 @Composable
 private fun ProfileResponsivePreview() {

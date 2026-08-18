@@ -1,4 +1,4 @@
-package com.rizvandavudov.fitnest.feature.home.components
+package com.rizvandavudov.fitnest.feature.home.ui.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background

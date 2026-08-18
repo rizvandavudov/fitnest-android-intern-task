@@ -1,6 +1,9 @@
 package com.rizvandavudov.fitnest.feature.profile
 
 import androidx.lifecycle.ViewModel
+import com.rizvandavudov.fitnest.feature.profile.data.ProfileDataSource
+import com.rizvandavudov.fitnest.feature.profile.data.ProfileFakeRepo
+import com.rizvandavudov.fitnest.feature.profile.ui.mapper.ProfileUiMapper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,10 +26,17 @@ sealed interface ProfileUiEvent {
     data object LogoutRequested : ProfileUiEvent
 }
 
-class ProfileViewModel : ViewModel() {
+class ProfileViewModel(
+    private val profileDataSource: ProfileDataSource =
+        ProfileFakeRepo(),
+    private val profileUiMapper: ProfileUiMapper =
+        ProfileUiMapper(),
+) : ViewModel() {
 
     private val _uiState = MutableStateFlow(
-        ProfileSampleData.state,
+        profileUiMapper.map(
+            dataSource = profileDataSource,
+        ),
     )
 
     val uiState: StateFlow<ProfileUiState> =
